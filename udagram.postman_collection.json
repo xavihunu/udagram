@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "7e3dea94-51ff-418c-969b-5430e54917f0",
+		"name": "udagram",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "filtered image",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiJ9.VGhpcyBpcyBteSBwYXNzd29yZA.wVv33IF9ZoScTIz0KEf6VCtbfonqFuMcXdhez0F_4yA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "da3052d8-b09c-4665-b311-9538e46383ad",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "e47be5dd-ac6f-4eba-8004-8f681b6be1a4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "5e264b6a-3dba-4905-ab35-043acfb1a44e",
+			"key": "host",
+			"value": "http://localhost:8082",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
