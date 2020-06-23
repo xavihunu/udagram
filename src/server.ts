@@ -2,8 +2,6 @@ import express, { Request, Response } from 'express';
 import bodyParser from 'body-parser';
 import {filterImageFromURL, deleteLocalFiles} from './util/util';
 import { requireAuth } from './controllers/auth.router';
-import * as jwt from "jsonwebtoken";
-import {config} from "./config/config";
 
 (async () => {
 
@@ -34,7 +32,7 @@ import {config} from "./config/config";
   //    image_url: URL of a publicly accessible image
   // RETURNS
   //   the filtered image file [!!TIP res.sendFile(filteredpath); might be useful]
-  app.get('/filteredimage', async (req: Request, res: Response) => {
+  app.get('/filteredimage', requireAuth, async (req: Request, res: Response) => {
 
     // 1 Validate the image_url query
     const imageUrl = req.query.image_url;
